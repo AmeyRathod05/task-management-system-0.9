@@ -1,127 +1,91 @@
-# TailAdmin Pro - Next.js (v2.0)
+Task Management App
+A feature-rich Task Management application built with Next.js and powered by a Laravel API backend, designed to manage projects, clients, and tasks with multiple interactive views like List, Table, Kanban, and Gantt. It includes advanced functionalities such as editable cells, configurable columns, and high-performance datatables.
 
-[TailAdmin](https://tailadmin.com) is a modern, responsive, and customizable admin dashboard template built using
-Tailwind CSS and Next.js. It is designed to help developers build beautiful and functional dashboards quickly and
-easily.
+🚀 Features
+CRUD operations for Projects, Clients, and Tasks via Laravel API
 
-## Quick Links
+Multiple task views:
 
-- [✨ Visit Website](https://tailadmin.com)
-- [📄 Documentation](https://tailadmin.com/docs)
-- [⬇️ Download](https://tailadmin.com/download)
-- [🌐 Live Site](https://nextjs-demo.tailadmin.com)
+List View
 
-## Installation
+Table View with editable cells & configurable columns
 
-### Prerequisites
+Kanban Board
 
-To get started with TailAdmin, ensure you have the following prerequisites installed and set up:
+Gantt Chart
 
-- Node.js 18.x or later (recommended to use Node.js 20.x or later)
+Fast and responsive UI using high-performance data tables
 
-### Getting Started
+Modern UI with support for in-place editing and customization
 
-1. Install dependencies:
+🛠️ Tech Stack
+Frontend: Next.js
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-   > Use `--legacy-peer-deps` flag if you face peer-dependency error during installation.
+Backend API: Laravel 12
 
-2. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+UI Libraries: Tailwind CSS, React Libraries for Gantt/Kanban
 
-## Changelog
+Data Handling: Axios or Fetch for API requests
 
-### Version 2.1.1 - [March 25, 2025]
+📦 Installation
+bash
+Copy
+Edit
+# Clone the repository
+git clone https://github.com/yourusername/task-management-app.git
 
-- Updated to Next v15.2.3 for [CVE-2025-29927](https://nextjs.org/blog/cve-2025-29927) concerns
-- Included overrides vectormaps for packages to prevent peer dependency errors during installation.
-- Migrated from react-flatpickr to flatpickr package for React 19 support
+# Navigate to project folder
+cd task-management-app
 
-### Version 2.1.0 - [March 10, 2025]
+# Install dependencies
+npm install
 
-#### Update Overview
+# Start the development server
+npm run dev
+📂 Folder Structure (Frontend)
+bash
+Copy
+Edit
+/components       # Reusable UI components
+/app           # Next.js app router (Routes)
+/views            # List, Table, Kanban, Gantt view components
+/utils            # API handlers, config, helpers
+🔗 API Integration
+The app connects to a Laravel API backend to handle:
 
-- Added new dashboard design for saas product.
-- New Metrics card
-- Product performance tab with charts
+GET /projects, POST /projects (Project CRUD)
 
-### Version 2.0.1 - [February 27, 2025]
+GET /clients, POST /clients (Client CRUD)
 
-#### Update Overview
+GET /tasks, POST /tasks (Task CRUD)
 
-- Upgraded to Tailwind CSS v4 for better performance and efficiency.
-- Updated class usage to match the latest syntax and features.
-- Replaced deprecated class and optimized styles.
+Update the base URL in your environment config:
 
-#### Next Steps
+env
+Copy
+Edit
+NEXT_PUBLIC_API_BASE_URL=http://your-laravel-api.test/api
+🧭 Usage Guide
+Install dependencies: npm install
 
-- Run npm install or yarn install to update dependencies.
-- Check for any style changes or compatibility issues.
-- Refer to the Tailwind CSS v4 [Migration Guide](https://tailwindcss.com/docs/upgrade-guide) on this release. if needed.
-- This update keeps the project up to date with the latest Tailwind improvements. 🚀
+Run development server: npm run dev
 
-### v2.0.0 (February 2025)
+Connect to Laravel API: Make sure your Laravel backend is running and accessible.
 
-A major update focused on Next.js 15 implementation and comprehensive redesign.
+Navigate through views:
 
-#### Major Improvements
+Use the sidebar or top menu to switch between List, Table, Kanban, and Gantt views.
 
-- Complete redesign using Next.js 15 App Router and React Server Components
-- Enhanced user interface with Next.js-optimized components
-- Improved responsiveness and accessibility
-- New features including collapsible sidebar, chat screens, and calendar
-- Redesigned authentication using Next.js App Router and server actions
-- Updated data visualization using ApexCharts for React
+Edit and manage tasks directly from the table with inline editing.
 
-#### Breaking Changes
+Customize columns visibility and layout as needed.
 
-- Migrated from Next.js 14 to Next.js 15
-- Chart components now use ApexCharts for React
-- Authentication flow updated to use Server Actions and middleware
+📌 Future Improvements
+Role-based access control
 
-#### Breaking Changes
+Real-time updates via WebSockets
 
-- Migrated from Next.js 14 to Next.js 15
-- Chart components now use ApexCharts for React
-- Authentication flow updated to use Server Actions and middleware
+Notifications and reminders
 
-[Read more](https://tailadmin.com/docs/update-logs/nextjs) on this release.
+Task dependencies and timelines
 
-### v1.3.4 (July 01, 2024)
-
-- Fixed JSvectormap rendering issues
-
-### v1.3.3 (June 20, 2024)
-
-- Fixed build error related to Loader component
-
-### v1.3.2 (June 19, 2024)
-
-- Added ClickOutside component for dropdown menus
-- Refactored sidebar components
-- Updated Jsvectormap package
-
-### v1.3.1 (Feb 12, 2024)
-
-- Fixed layout naming consistency
-- Updated styles
-
-### v1.3.0 (Feb 05, 2024)
-
-- Upgraded to Next.js 14
-- Added Flatpickr integration
-- Improved form elements
-- Enhanced multiselect functionality
-- Added default layout component
-
-## License
-
-Refer to our [LICENSE](https://tailadmin.com/license) page for more information.
